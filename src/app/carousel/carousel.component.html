@@ -1,0 +1,11 @@
+<ngb-carousel *ngIf="images" class="carousel">
+  <ng-template ngbSlide>
+    <img [src]="images[0]" alt="Image slider numéro 1">
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[1]" alt="Image slider numéro 2">
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[2]" alt="Image slider numéro 2">
+  </ng-template>
+</ngb-carousel>
