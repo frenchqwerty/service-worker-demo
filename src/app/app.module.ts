@@ -7,11 +7,15 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ListImageComponent } from './list-image/list-image.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        CarouselComponent
+        CarouselComponent,
+        ListImageComponent,
+        ImageComponent
     ],
     imports: [
         BrowserModule,
