@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
     selector: 'app-network-handler',
@@ -6,7 +6,6 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
     styleUrls: ['./network-handler.component.scss']
 })
 export class NetworkHandlerComponent implements OnInit {
-    text: string;
     @Input() status: boolean;
     @Output() statusChange = new EventEmitter<boolean>();
 
@@ -14,11 +13,6 @@ export class NetworkHandlerComponent implements OnInit {
     }
 
     ngOnInit() {
-        if (this.status) {
-            this.text = 'En ligne';
-        } else {
-            this.text = 'Hors ligne';
-        }
     }
 
     switchNetworkStatus(): void {
@@ -26,11 +20,6 @@ export class NetworkHandlerComponent implements OnInit {
             this.status = !this.status;
             localStorage.setItem('statusNetwork', this.status.toString());
             this.statusChange.emit(this.status);
-            if (this.status) {
-                this.text = 'En ligne';
-            } else {
-                this.text = 'Hors ligne';
-            }
         }
     }
 

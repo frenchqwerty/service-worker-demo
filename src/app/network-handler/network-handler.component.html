@@ -1,4 +1,5 @@
 <div class="custom-control custom-switch">
   <input type="checkbox" class="custom-control-input" id="customSwitch1" (click)="switchNetworkStatus()" [checked]="status">
-  <label class="custom-control-label" for="customSwitch1">{{text}}</label>
+  <label class="custom-control-label" for="customSwitch1" *ngIf="status; else offline">En ligne</label>
+  <ng-template #offline><label class="custom-control-label" for="customSwitch1">Hors Ligne</label></ng-template>
 </div>

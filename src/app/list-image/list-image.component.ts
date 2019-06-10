@@ -27,7 +27,7 @@ export class ListImageComponent implements OnInit, OnChanges {
     }
 
     ngOnChanges(changes: SimpleChanges): void {
-        if (!changes.status.currentValue) {
+        if (!changes.status.currentValue && !navigator.onLine) {
             this.swapImagesToOfflineMode();
         } else if (changes.status.currentValue) {
             this.swapImagesToOnlineMode();

@@ -1,7 +1,10 @@
 <app-carousel></app-carousel>
-<p>{{connectionStatus}}</p>
-<div class="col-5">
-    <app-network-handler [(status)]="connectionStatus"></app-network-handler>
+<div class="container network-handler-wrapper">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <app-network-handler [(status)]="connectionStatus"></app-network-handler>
+        </div>
+    </div>
 </div>
 <app-list-image [status]="connectionStatus"></app-list-image>
 <router-outlet></router-outlet>
