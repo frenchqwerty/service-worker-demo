@@ -12,8 +12,3 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Conclusion
 Ce projet m'a permis de découvrir l'API Service Worker. J'ai utilisé ce qu'Angular fournit, [ici](https://angular.io/guide/service-worker-getting-started).
-Je n'ai pas pu tout faire par manque de temps.
-
-Quand on passe en mode offline ou online, je n'affiche pas de message. J'aurais fait un component nommé "StateMessage" qui affiche le message avec une durée d'affichage de 5 secondes quand on clique sur le switch pour changer le mode.
-
-On peut dire que j'ai un indicateur de réseau grâce à mon switch, je le bloque lorsqu'il detecte qu'il n'y a pas de connection.
